@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #39297b;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 10px;
+    background: #434989;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+form button {
+    padding: 15px 30px;
+    background: #ff3929;
+    color: #fff;
+    font-size: 18px;
+    border: 3px solid black;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #e03225;
+}
+
+::placeholder {
+    color: #bbb;
+}
+
+#colorFilter {
+    height: 100%;
+    background: #ff3929;
+    color: white;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: background 0.3s;
+}
+
+#colorFilter:hover {
+    background: #e03225;
+}
+
+#showButton {
+    border: none;
+    outline: none;
+    background: #ff3929;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    margin: 40px auto;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+
+#showButton:hover {
+    background: #e03225;
+}
+
+#searchResult {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+#searchResult img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#searchResult img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    form input, #colorFilter, form button {
+        width: 100%;
+    }
+
+    #searchResult {
+        grid-template-columns: 1fr;
+    }
+}
